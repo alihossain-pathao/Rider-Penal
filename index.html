@@ -1171,6 +1171,25 @@ loadHist();
   .cc-bar .cc-btns{margin:0;gap:10px}
   .cc-bar .cc-btns .btn{height:50px;border-radius:14px}
   #ccCopy{background:linear-gradient(135deg,#34d399,#14b8a6);color:#04201a;border:0;box-shadow:0 8px 20px rgba(20,184,166,.28)}
+
+  /* ---------- fit everything on one screen, no scrolling ---------- */
+  html,body{height:100%;overflow:hidden}
+  .app{height:100vh;height:100dvh;min-height:0;overflow:hidden}
+  .main,#view-cash,#view-cash&gt;.sum-card:first-child{min-height:0}
+  #view-cash&gt;.sum-card:first-child{padding:6px 12px 0}
+  .cc-head{padding:0 14px 6px;margin-bottom:6px;flex:none}
+  .cc-head span:first-child{white-space:nowrap}
+  #ccRows{flex:1 1 0;min-height:0;gap:6px !important;grid-auto-rows:minmax(0,1fr)}
+  #ccRows .cc-grid{height:100%;min-height:0;grid-template-rows:minmax(0,1fr);padding:4px 14px}
+  .cc-in{height:100%;max-height:48px;min-height:0;align-self:center;padding:0 6px}
+  .cc-den,.cc-amt{align-self:center}
+  .cc-bar{position:static;flex:none;margin:8px -12px 0;padding:4px 16px calc(10px + env(safe-area-inset-bottom,0px))}
+  .cc-bar .cc-total{padding:6px 2px 0;margin-top:2px}
+  .cc-bar .cc-total .a{font-size:28px}
+  .cc-bar .cc-words{padding:0;min-height:0}
+  .cc-bar .cc-words:empty{display:none}
+  .cc-bar .cc-btns{margin-top:8px}
+  .cc-bar .cc-btns .btn{height:46px}
 &lt;/style&gt;
 &lt;/head&gt;
 &lt;body data-tab=&quot;cash&quot;&gt;
